@@ -5,7 +5,7 @@ import raven
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["eval.ai"]
+ALLOWED_HOSTS = ["mukayese.tdd.ai"]
 
 # Database
 # https://docs.djangoproject.com/en/1.10.2/ref/settings/#databases
@@ -13,9 +13,8 @@ ALLOWED_HOSTS = ["eval.ai"]
 CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
-    "https://evalai.s3.amazonaws.com",
-    "https://eval.ai",
-    "http://beta.eval.ai:9999",
+    "https://mukayese.s3.amazonaws.com",
+    "https://mukayese.tdd.ai",
 )
 
 DATABASES = {
@@ -60,7 +59,7 @@ MEDIA_URL = "http://%s.s3.amazonaws.com/%s/" % (
 DEFAULT_FILE_STORAGE = "settings.custom_storages.MediaStorage"
 
 # Setup Email Backend related settings
-DEFAULT_FROM_EMAIL = "noreply@cloudcv.org"
+DEFAULT_FROM_EMAIL = "noreply@mukayese.tdd.ai"
 EMAIL_BACKEND = "django_ses.SESBackend"
 EMAIL_HOST = os.environ.get("EMAIL_HOST")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
