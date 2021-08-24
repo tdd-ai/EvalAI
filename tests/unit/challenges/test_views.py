@@ -4590,7 +4590,7 @@ class PresignedURLAnnotationTest(BaseChallengePhaseClass):
             "AWS_ACCESS_KEY_ID": "dummy-key",
             "AWS_SECRET_ACCESS_KEY": "dummy-access-key",
             "AWS_STORAGE_BUCKET_NAME": "test-bucket",
-            "AWS_REGION": "us-east-1",
+            "AWS_REGION": "eu-central-1",
         }
         client = boto3.client("s3")
         client.create_bucket(Bucket="test-bucket")
@@ -4623,7 +4623,7 @@ class PresignedURLAnnotationTest(BaseChallengePhaseClass):
             "AWS_ACCESS_KEY_ID": "dummy-key",
             "AWS_SECRET_ACCESS_KEY": "dummy-access-key",
             "AWS_STORAGE_BUCKET_NAME": "test-bucket",
-            "AWS_REGION": "us-east-1",
+            "AWS_REGION": "eu-central-1",
         }
         client = boto3.client("s3")
         client.create_bucket(Bucket="test-bucket")

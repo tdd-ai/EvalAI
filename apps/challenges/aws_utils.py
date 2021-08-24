@@ -40,7 +40,7 @@ aws_keys = {
     "AWS_ACCOUNT_ID": os.environ.get("AWS_ACCOUNT_ID", "x"),
     "AWS_ACCESS_KEY_ID": os.environ.get("AWS_ACCESS_KEY_ID", "x"),
     "AWS_SECRET_ACCESS_KEY": os.environ.get("AWS_SECRET_ACCESS_KEY", "x"),
-    "AWS_REGION": os.environ.get("AWS_DEFAULT_REGION", "us-east-1"),
+    "AWS_REGION": os.environ.get("AWS_DEFAULT_REGION", "eu-central-1"),
     "AWS_STORAGE_BUCKET_NAME": os.environ.get(
         "AWS_STORAGE_BUCKET_NAME", "evalai-s3-bucket"
     ),
@@ -56,13 +56,13 @@ COMMON_SETTINGS_DICT = {
     ),
     "WORKER_IMAGE": os.environ.get(
         "WORKER_IMAGE",
-        "{}.dkr.ecr.us-east-1.amazonaws.com/evalai-{}-worker:latest".format(
+        "{}.dkr.ecr.eu-central-1.amazonaws.com/evalai-{}-worker:latest".format(
             aws_keys["AWS_ACCOUNT_ID"], ENV
         ),
     ),
     "CODE_UPLOAD_WORKER_IMAGE": os.environ.get(
         "CODE_UPLOAD_WORKER_IMAGE",
-        "{}.dkr.ecr.us-east-1.amazonaws.com/evalai-{}-worker:latest".format(
+        "{}.dkr.ecr.eu-central-1.amazonaws.com/evalai-{}-worker:latest".format(
             aws_keys["AWS_ACCOUNT_ID"], ENV
         ),
     ),
@@ -1066,7 +1066,7 @@ def create_eks_cluster_subnets(challenge):
         subnet_ids = []
         response = client.create_subnet(
             CidrBlock=challenge_obj.subnet_1_cidr,
-            AvailabilityZone="us-east-1a",
+            AvailabilityZone="eu-central-1a",
             VpcId=vpc_ids[0],
         )
         subnet_1_id = response["Subnet"]["SubnetId"]
@@ -1074,7 +1074,7 @@ def create_eks_cluster_subnets(challenge):
 
         response = client.create_subnet(
             CidrBlock=challenge_obj.subnet_2_cidr,
-            AvailabilityZone="us-east-1b",
+            AvailabilityZone="eu-central-1b",
             VpcId=vpc_ids[0],
         )
         subnet_2_id = response["Subnet"]["SubnetId"]

@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
             model_name="challenge",
             name="aws_region",
             field=models.CharField(
-                blank=True, default="us-east-1", max_length=50, null=True
+                blank=True, default="eu-central-1", max_length=50, null=True
             ),
         ),
         migrations.AddField(

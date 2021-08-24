@@ -207,7 +207,7 @@ AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", "aws_access_key_id")
 AWS_SECRET_ACCESS_KEY = os.environ.get(
     "AWS_SECRET_ACCESS_KEY", "aws_secret_access_key"
 )
-AWS_REGION = os.environ.get("AWS_DEFAULT_REGION", "us-east-1")
+AWS_REGION = os.environ.get("AWS_DEFAULT_REGION", "eu-central-1")
 
 # Broker url for celery
 CELERY_BROKER_URL = "sqs://%s:%s@" % (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)

@@ -256,10 +256,10 @@ def get_or_create_ecr_repository(name, aws_keys):
         tuple -- Contains repository dict and boolean field to represent whether ECR repository was created
         Eg: (
                 {
-                    'repositoryArn': 'arn:aws:ecr:us-east-1:1234567890:repository/some-repository-name',
+                    'repositoryArn': 'arn:aws:ecr:eu-central-1:1234567890:repository/some-repository-name',
                     'registryId': '1234567890',
                     'repositoryName': 'some-repository-name',
-                    'repositoryUri': '1234567890.dkr.ecr.us-east-1.amazonaws.com/some-repository-name',
+                    'repositoryUri': '1234567890.dkr.ecr.eu-central-1.amazonaws.com/some-repository-name',
                     'createdAt': datetime.datetime(2019, 2, 6, 9, 12, 5, tzinfo=tzlocal())
                 },
                 False

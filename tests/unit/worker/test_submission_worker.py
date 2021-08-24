@@ -62,7 +62,7 @@ class BaseAPITestClass(APITestCase):
         self.sqs_client = boto3.client(
             "sqs",
             endpoint_url=os.environ.get("AWS_SQS_ENDPOINT", "http://sqs:9324"),
-            region_name=os.environ.get("AWS_DEFAULT_REGION", "us-east-1"),
+            region_name=os.environ.get("AWS_DEFAULT_REGION", "eu-central-1"),
             aws_secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY"),
             aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"),
         )

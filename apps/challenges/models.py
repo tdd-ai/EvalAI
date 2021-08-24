@@ -125,7 +125,7 @@ class Challenge(TimeStampedModel):
         max_length=200, default="", null=True, blank=True
     )
     aws_region = models.CharField(
-        max_length=50, default="us-east-1", null=True, blank=True
+        max_length=50, default="eu-central-1", null=True, blank=True
     )
     use_host_credentials = models.BooleanField(default=False)
     cli_version = models.CharField(

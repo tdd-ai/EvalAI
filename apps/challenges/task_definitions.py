@@ -120,7 +120,7 @@ task_definition = """
                 "logDriver": "awslogs",
                 "options": {{
                     "awslogs-group": "{log_group_name}",
-                    "awslogs-region": "us-east-1",
+                    "awslogs-region": "eu-central-1",
                     "awslogs-stream-prefix": "{queue_name}",
                     "awslogs-create-group": "true",
                 }},
@@ -205,7 +205,7 @@ task_definition_code_upload_worker = """
                 "logDriver": "awslogs",
                 "options": {{
                     "awslogs-group": "{log_group_name}",
-                    "awslogs-region": "us-east-1",
+                    "awslogs-region": "eu-central-1",
                     "awslogs-stream-prefix": "{queue_name}",
                     "awslogs-create-group": "true",
                 }},
@@ -354,7 +354,7 @@ container_definition_submission_worker = """
         "logDriver": "awslogs",
         "options": {{
             "awslogs-group": "{log_group_name}",
-            "awslogs-region": "us-east-1",
+            "awslogs-region": "eu-central-1",
             "awslogs-stream-prefix": "{queue_name}",
             "awslogs-create-group": "true",
         }},
@@ -427,7 +427,7 @@ container_definition_code_upload_worker = """
         "logDriver": "awslogs",
         "options": {{
             "awslogs-group": "{log_group_name}",
-            "awslogs-region": "us-east-1",
+            "awslogs-region": "eu-central-1",
             "awslogs-stream-prefix": "{queue_name}",
             "awslogs-create-group": "true",
         }},

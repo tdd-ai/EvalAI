@@ -1,23 +1,23 @@
-version: '3'
+version: "3"
 services:
   django:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/evalai-staging-backend:${COMMIT_ID}
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/evalai-staging-backend:${COMMIT_ID}
     env_file:
       - docker/prod/docker_staging.env
     build:
       context: ./
       dockerfile: docker/prod/django/Dockerfile
     ports:
-      - '8000:8000'
+      - "8000:8000"
     logging:
       driver: awslogs
       options:
-        awslogs-region: us-east-1
+        awslogs-region: eu-central-1
         awslogs-group: django_staging
-        awslogs-create-group: 'true'
+        awslogs-create-group: "true"
 
   celery:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/evalai-staging-celery:${COMMIT_ID}
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/evalai-staging-celery:${COMMIT_ID}
     env_file:
       - docker/prod/docker_staging.env
     build:
@@ -28,12 +28,12 @@ services:
     logging:
       driver: awslogs
       options:
-        awslogs-region: us-east-1
+        awslogs-region: eu-central-1
         awslogs-group: celery_staging
-        awslogs-create-group: 'true'
+        awslogs-create-group: "true"
 
   worker:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/evalai-staging-worker:${COMMIT_ID}
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/evalai-staging-worker:${COMMIT_ID}
     build:
       context: ./
       dockerfile: docker/prod/worker/Dockerfile
@@ -41,26 +41,26 @@ services:
       - docker/prod/docker_staging.env
 
   nodejs:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/evalai-staging-frontend:${COMMIT_ID}
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/evalai-staging-frontend:${COMMIT_ID}
     build:
       context: ./
       dockerfile: docker/prod/nodejs/Dockerfile
       args:
         NODE_ENV: staging
     ports:
-      - '80:80'
+      - "80:80"
     volumes:
       - /code/node_modules
       - /code/bower_components
     logging:
       driver: awslogs
       options:
-        awslogs-region: us-east-1
+        awslogs-region: eu-central-1
         awslogs-group: nodejs_staging
-        awslogs-create-group: 'true'
+        awslogs-create-group: "true"
 
   nodejs_v2:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/evalai-production-frontend-v2:${COMMIT_ID}
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/evalai-production-frontend-v2:${COMMIT_ID}
     build:
       context: ./
       dockerfile: docker/prod/nodejs_v2/Dockerfile
@@ -74,21 +74,21 @@ services:
     logging:
       driver: awslogs
       options:
-        awslogs-region: us-east-1
+        awslogs-region: eu-central-1
         awslogs-group: nodejs_production_v2
         awslogs-create-group: "true"
 
   remote-worker:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/evalai-staging-remote-worker:${COMMIT_ID}
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/evalai-staging-remote-worker:${COMMIT_ID}
     build:
       context: ./
       dockerfile: docker/prod/worker/Dockerfile
-    command: ['python', '-m', 'scripts.workers.remote_submission_worker']
+    command: ["python", "-m", "scripts.workers.remote_submission_worker"]
     env_file:
       - docker/prod/docker_remote_worker.env
 
   code-upload-worker:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/evalai-staging-code-upload-worker:${COMMIT_ID}
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/evalai-staging-code-upload-worker:${COMMIT_ID}
     env_file:
       - docker/prod/docker_code_upload_worker.env
     build:
@@ -106,11 +106,11 @@ services:
       - ./monitoring/prometheus/prometheus_db:/prometheus
       - ./monitoring/prometheus/prometheus_db:/etc/prometheus
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--web.external-url=http://localhost:9090/prometheus'
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--web.external-url=http://localhost:9090/prometheus"
     ports:
-      - '9090:9090'
-  
+      - "9090:9090"
+
   grafana:
     hostname: grafana
     image: grafana/grafana:latest
@@ -122,41 +122,41 @@ services:
     depends_on:
       - prometheus
     ports:
-      - '3000:3000'
+      - "3000:3000"
 
   statsd-exporter:
     hostname: statsd
     image: prom/statsd-exporter:latest
     command:
-      - '--log.level=info'
-      - '--web.telemetry-path=/statsd/metrics'
+      - "--log.level=info"
+      - "--web.telemetry-path=/statsd/metrics"
     ports:
-      - '9125:9125/udp'
-      - '9125:9125/tcp'
-      - '9102:9102'
-  
+      - "9125:9125/udp"
+      - "9125:9125/tcp"
+      - "9102:9102"
+
   node_exporter:
     hostname: node_exporter
     image: prom/node-exporter
     ports:
-      - '9100:9100'
-  
+      - "9100:9100"
+
   nginx-ingress:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/evalai-staging-nginx-ingress:${COMMIT_ID}
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/evalai-staging-nginx-ingress:${COMMIT_ID}
     build:
       context: ./
       dockerfile: docker/prod/nginx-ingress/Dockerfile
       args:
         MONITORING_ENV: staging
-    depends_on: 
+    depends_on:
       - prometheus
       - grafana
       - statsd-exporter
       - alert-manager
     ports:
-      - '80:80'
-      - '443:443'
-    
+      - "80:80"
+      - "443:443"
+
   alert-manager:
     hostname: alert_manager
     image: prom/alertmanager
@@ -166,8 +166,8 @@ services:
       - ./monitoring/alertmanager/data:/data
       - ./monitoring/alertmanager/templates:/etc/alertmanager/templates
     command:
-      - '--config.file=/prometheus/alert_manager.yml'
-      - '--storage.path=/data'
-      - '--web.external-url=http://localhost:9093/alert_manager'
+      - "--config.file=/prometheus/alert_manager.yml"
+      - "--storage.path=/data"
+      - "--web.external-url=http://localhost:9093/alert_manager"
     ports:
-      - '9093:9093'
+      - "9093:9093"
