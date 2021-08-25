@@ -103,9 +103,9 @@ case $opt in
             fi
             echo "Pulling queue name for $env server challenge..."
             if [ ${env} == "staging" ]; then
-                queue_name=$(curl -k -L -X GET -H "Authorization: Token $token" https://staging.eval.ai/api/challenges/get_broker_url/$challenge/)
+                queue_name=$(curl -k -L -X GET -H "Authorization: Token $token" https://staging.mukayese.tdd.ai/api/challenges/get_broker_url/$challenge/)
             elif [ ${env} == "production" ]; then
-                queue_name=$(curl -k -L -X GET -H "Authorization: Token $token" https://eval.ai/api/challenges/get_broker_url/$challenge/)
+                queue_name=$(curl -k -L -X GET -H "Authorization: Token $token" https://mukayese.tdd.ai/api/challenges/get_broker_url/$challenge/)
             fi
             echo "Completed pulling Queue name"
             # preprocess the python list to bash array
@@ -134,9 +134,9 @@ case $opt in
             token=${3}
             echo "Pulling queue names for $env server challenges..."
             if [ ${env} == "staging" ]; then
-                queue_names=$(curl -k -L -X GET -H "Authorization: Token $token" https://staging.eval.ai/api/challenges/get_broker_urls/)
+                queue_names=$(curl -k -L -X GET -H "Authorization: Token $token" https://staging.mukayese.tdd.ai/api/challenges/get_broker_urls/)
             elif [ ${env} == "production" ]; then
-                queue_names=$(curl -k -L -X GET -H "Authorization: Token $token" https://eval.ai/api/challenges/get_broker_urls/)
+                queue_names=$(curl -k -L -X GET -H "Authorization: Token $token" https://mukayese.tdd.ai/api/challenges/get_broker_urls/)
             fi
             echo "Completed pulling Queue list"
             # preprocess the python list to bash array
