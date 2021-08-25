@@ -12,14 +12,6 @@ ALLOWED_HOSTS = ["mukayese.tdd.ai"]
 
 # Database
 # https://docs.djangoproject.com/en/1.10.2/ref/settings/#databases
-
-CORS_ORIGIN_ALLOW_ALL = False
-
-CORS_ORIGIN_WHITELIST = (
-    "https://mukayese.s3.amazonaws.com",
-    "https://mukayese.tdd.ai",
-)
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
@@ -52,7 +44,14 @@ AWS_SES_REGION_NAME = os.environ.get("AWS_SES_REGION_NAME")
 AWS_SES_REGION_ENDPOINT = os.environ.get("AWS_SES_REGION_ENDPOINT")
 
 # Amazon S3 Configurations
-AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = "%s.s3.eu-central-1.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+    "https://%s.s3.eu-central-1.amazonaws.com" % AWS_STORAGE_BUCKET_NAME,
+    "https://mukayese.tdd.ai",
+)
 
 # static files configuration on S3
 STATICFILES_LOCATION = "static"
@@ -61,7 +60,7 @@ STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
 
 # Media files configuration on S3
 MEDIAFILES_LOCATION = "media"
-MEDIA_URL = "http://%s.s3.amazonaws.com/%s/" % (
+MEDIA_URL = "http://%s.s3.eu-central-1.amazonaws.com/%s/" % (
     AWS_STORAGE_BUCKET_NAME,
     MEDIAFILES_LOCATION,
 )
