@@ -2,6 +2,9 @@ from .common import *  # noqa: ignore=F405
 
 import os
 import raven
+import logging
+
+logger = logging.getLogger(__name__)
 
 DEBUG = False
 
@@ -20,11 +23,17 @@ CORS_ORIGIN_WHITELIST = (
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": os.environ.get("RDS_DB_NAME"),
-        "USER": os.environ.get("RDS_USERNAME"),
-        "PASSWORD": os.environ.get("RDS_PASSWORD"),
-        "HOST": os.environ.get("RDS_HOSTNAME"),
-        "PORT": os.environ.get("RDS_PORT"),
+        "NAME": os.environ.get("POSTGRES_NAME", "evalai"),  # noqa: ignore=F405
+        "USER": os.environ.get(  # noqa: ignore=F405
+            "POSTGRES_USER", "postgres"
+        ),  # noqa: ignore=F405
+        "PASSWORD": os.environ.get(  # noqa: ignore=F405
+            "POSTGRES_PASSWORD", "postgres"
+        ),  # noqa: ignore=F405
+        "HOST": os.environ.get(  # noqa: ignore=F405
+            "POSTGRES_HOST", "localhost"
+        ),  # noqa: ignore=F405
+        "PORT": os.environ.get("POSTGRES_PORT", 5432),  # noqa: ignore=F405
     }
 }
 
