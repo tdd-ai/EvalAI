@@ -29,11 +29,10 @@ DATABASES = {
     }
 }
 
-DATADOG_APP_NAME = "EvalAI"
-DATADOG_APP_KEY = os.environ.get("DATADOG_APP_KEY")
-DATADOG_API_KEY = os.environ.get("DATADOG_API_KEY")
-
-MIDDLEWARE += ["middleware.metrics.DatadogMiddleware"]  # noqa
+# DATADOG_APP_NAME = "EvalAI"
+# DATADOG_APP_KEY = os.environ.get("DATADOG_APP_KEY")
+# DATADOG_API_KEY = os.environ.get("DATADOG_API_KEY")
+# MIDDLEWARE += ["middleware.metrics.DatadogMiddleware"]  # noqa
 
 INSTALLED_APPS += ("storages", "raven.contrib.django.raven_compat")  # noqa
 
@@ -42,6 +41,9 @@ AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 AWS_SES_REGION_NAME = os.environ.get("AWS_SES_REGION_NAME")
 AWS_SES_REGION_ENDPOINT = os.environ.get("AWS_SES_REGION_ENDPOINT")
+
+AWS_SES_ACCESS_KEY_ID =  os.environ.get("AWS_SES_ACCESS_KEY_ID")
+AWS_SES_SECRET_ACCESS_KEY = os.environ.get("AWS_SES_SECRET_ACCESS_KEY")
 
 # Amazon S3 Configurations
 AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
