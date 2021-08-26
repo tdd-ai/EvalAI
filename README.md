@@ -73,15 +73,11 @@ PhD Magic...
 
 #### Named-Entity Recognition
 
-Senior year magic
+For Named-Entity Recognition task, we trained two nlp models: [BiLSTM model](https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html) and [Turkish BERT](https://github.com/stefan-it/turkish-bert) using two different datasets: [XTREME](https://data.tdd.ai/#/204e1373-7a9e-4f76-aa75-7708593cf2dd) and [Turkish News NER Dataset](https://data.tdd.ai/#/0a027105-498c-46f7-9867-2ceeac5e64b7). Test data predictions of both datasets are used for creating baselines in the Named-Entity Recognition challange.
 
 #### Machine Translation
 
 For machine translation, we trained [Fairseq](https://github.com/facebookresearch/fairseq), [NPMT](https://github.com/posenhuang/NPMT), [Tensor2tensor](https://github.com/tensorflow/tensor2tensor#translation) models on the Turkish-English subsets of 2 different datasets: [OpenSubtitles](https://opus.nlpl.eu/OpenSubtitles2018.php) and [MUST-C](https://ict.fbk.eu/must-c/).
-
-#### Natural Language Inference
-
-Senior year magic
 
 #### Sentence-level Tokenization
 
@@ -89,7 +85,7 @@ Fill in
 
 #### Part-of-speech Tagging
 
-Senior year magic
+For Named-Entity Recognition task, we trained two nlp models: [BiLSTM model](https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html) and [Turkish BERT](https://github.com/stefan-it/turkish-bert) using [UD-Turkish-BOUN](https://github.com/UniversalDependencies/UD_Turkish-BOUN) dataset. Test data predictions of this dataset is used for creating baselines in the Part-of-speech Tagging challange.
 
 ## Future Directions 
 
