@@ -35,7 +35,7 @@ Currently, we provide leaderboards in 8 different tasks and on X different datas
 1. Spell-checking and Correction - Custom Dataset
 2. Text Classification - [OffensEval](https://sites.google.com/site/offensevalsharedtask/multilingual)
 3. Language Modeling - [trwiki-67](https://data.tdd.ai/#/6bdc4da6-7638-4adc-825b-d101918439bb) and [trnews-64](https://github.com/tdd-ai/trnews-64)
-4. Named-Entity Recognition (arda)
+4. Named-Entity Recognition - [XTREME](https://data.tdd.ai/#/204e1373-7a9e-4f76-aa75-7708593cf2dd) and [Turkish News NER Dataset](https://data.tdd.ai/#/0a027105-498c-46f7-9867-2ceeac5e64b7)
 5. Machine Translation - [OpenSubtitles](https://opus.nlpl.eu/OpenSubtitles2018.php) and [MUST-C](https://ict.fbk.eu/must-c/)
 6. Natural Language Inference - [XNLI](https://github.com/facebookresearch/XNLI)
 7. Tokenization - Custom Datasets
