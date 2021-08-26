@@ -100,10 +100,10 @@ In addition to the challenges that are always open to submissions, we plan to or
 
 We plan to present the following benchmarks, on which we have started to work, in the future:
 
-1. Morphological Analysis - [Trmor2018](https://github.com/ai-ku/TrMor2018)
-1. Document Classification - [TTC-4900](https://huggingface.co/datasets/ttc4900#dataset-card-for-ttc4900-a-benchmark-data-for-turkish-text-categorization), [1150 News](https://data.tdd.ai/#/d2fe5fc8-2d2f-4fde-aad6-5e4b0dd1c1db) and [Trt-11](https://github.com/gurkan08/datasets/tree/master/trt_11_category)
+1. Morphological Analysis - [TrMor2018](https://github.com/ai-ku/TrMor2018)
+1. Document Classification - [TTC-4900](https://huggingface.co/datasets/ttc4900#dataset-card-for-ttc4900-a-benchmark-data-for-turkish-text-categorization), [1150 News](https://data.tdd.ai/#/d2fe5fc8-2d2f-4fde-aad6-5e4b0dd1c1db) and [TRT-11](https://github.com/gurkan08/datasets/tree/master/trt_11_category)
 1. Question Answering - [XQuad](https://github.com/deepmind/xquad) and [TQuad](https://github.com/TQuad/turkish-nlp-qa-dataset)
-4. Dependency Parsing - [UD Turkish BOUN](https://github.com/UniversalDependencies/UD_Turkish-BOUN)
+4. Dependency Parsing - [UD-Turkish-BOUN](https://github.com/UniversalDependencies/UD_Turkish-BOUN)
 2. Summarization
 3. Reading Comprehension
 
@@ -113,7 +113,7 @@ Since we require the open source implementation for submissions, we plan to crea
 
 ## Team Members
 
-- Ali Safaya - @asafaya19
+- Ali Safaya - @alisafaya
 - Emirhan Kurtuluş - @ekurtulus
 - Arda Göktoğan - @ardofski
 - Our Mentor - Dorukhan Afacan @dafajon
