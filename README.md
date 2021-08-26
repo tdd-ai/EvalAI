@@ -2,6 +2,8 @@
 
 Mukayese [mukayese.tdd.ai](mukayese.tdd.ai) is an all-in-one  benchmarking platform based on [EvalAI](https://github.com/Cloud-CV/EvalAI) project for various Turkish NLP tools and tasks, ranging from Spell-checking to Natural Language Understanding tasks (NLU).
 
+![Screenshot](./mukayese.png)
+
 ## Motivation
 
 The progress of research in any field depends heavily on previous work. Unfortunately, datasets/methods of Turkish NLP are very scattered, and hard to find. We present Mukayese (_Turkish word for Comparison_), an all-in-one benchmarking platform for Turkish NLP tools. Each enlisted NLP task has a leaderboard along with the relative models with their implementations and the relevant training/testing datasets. 
