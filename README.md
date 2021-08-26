@@ -37,14 +37,17 @@ Currently, we provide leaderboards in 8 different tasks and on X different datas
 3. Language Modeling - [trwiki-67](https://data.tdd.ai/#/6bdc4da6-7638-4adc-825b-d101918439bb) and [trnews-64](https://github.com/tdd-ai/trnews-64)
 4. Named-Entity Recognition - [XTREME](https://data.tdd.ai/#/204e1373-7a9e-4f76-aa75-7708593cf2dd) and [Turkish News NER Dataset](https://data.tdd.ai/#/0a027105-498c-46f7-9867-2ceeac5e64b7)
 5. Machine Translation - [OpenSubtitles](https://opus.nlpl.eu/OpenSubtitles2018.php) and [MUST-C](https://ict.fbk.eu/must-c/)
-6. Natural Language Inference - [XNLI](https://github.com/facebookresearch/XNLI)
-7. Tokenization - Custom Datasets
+7. Tokenization - [35M Tweets Tokenization](https://data.tdd.ai/#/ce9ce922-0bc6-4c6a-a887-18c9c534005a), [TrMor2018 Tokenization](https://data.tdd.ai/#/ea35db44-5c42-4a63-b20e-8b19d40c75dc)
 8. Part-of-speech Tagging - [UD-Turkish-BOUN](https://github.com/UniversalDependencies/UD_Turkish-BOUN)
 
+<!-- 6. Natural Language Inference - [XNLI](https://github.com/facebookresearch/XNLI) -->
+
 ## Datasets
+
 Under this project, we created 5 distinct datasets with in-depth documentation and train/validation/test splits for two datasets. In addition, all the datasets presented by our team in [Turkish Data Depository](https://data.tdd.ai/#/) are published.
 
 #### Datasets Created under this Project
+
 1. [trwiki-67](https://github.com/tdd-ai/trwiki-67)
 2. [trnews-64](https://github.com/tdd-ai/trnews-64)
 3. [TrMor Tokenization](https://data.tdd.ai/#/ea35db44-5c42-4a63-b20e-8b19d40c75dc)
