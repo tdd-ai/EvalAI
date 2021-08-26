@@ -24,9 +24,7 @@ The most important goal of Mukayese is to standardize the comparison and evaulat
 
 1. In many papers, authors do not include open source implementations of their works. This prevents the researchers to analyse the models and geting a greater understanding of the proposed method. Moreover, when unpublished, these models cannot be used for purposes fine-tuning or retraining with a different set of hyperparameters. We address this problem by labeling the submissions with which an open source implementation provided "verified". As the TDD Team, we test the submitted open source implementation, review it from the unbiased perspective of different researchers and require it to be published in an easy-to-use manner.   
 
-1. Benchmarking systems like [GLUE](https://gluebenchmark.com/) and [SuperGLUE](https://super.gluebenchmark.com/) provide a way for researchers to test a model they developed on an extensive set of tasks. We aim to do a better job with 
-
-## General Overview
+1. Benchmarking systems like [GLUE](https://gluebenchmark.com/) and [SuperGLUE](https://super.gluebenchmark.com/) provide a way for researchers to test a model they developed on an extensive set of tasks. We aim to do a better job with Mukayese by including more NLP tasks.
 
 ## Benchmarks
 
