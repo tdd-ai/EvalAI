@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
             model_name="challenge",
             name="worker_ami_type",
             field=models.CharField(
-                blank=True, default="AL2_x86_64_GPU", max_length=256, null=True
+                blank=True, default="AL2_x86_64", max_length=256, null=True
             ),
         ),
         migrations.AddField(
@@ -41,7 +41,7 @@ class Migration(migrations.Migration):
             model_name="challenge",
             name="worker_instance_type",
             field=models.CharField(
-                blank=True, default="g4dn.xlarge", max_length=256, null=True
+                blank=True, default="t3.medium", max_length=256, null=True
             ),
         ),
     ]

@@ -160,10 +160,10 @@ class Challenge(TimeStampedModel):
     )
     # Evaluation instance config for code upload challenge
     worker_instance_type = models.CharField(
-        max_length=256, null=True, blank=True, default="g4dn.xlarge"
+        max_length=256, null=True, blank=True, default="t3.medium"
     )
     worker_ami_type = models.CharField(
-        max_length=256, null=True, blank=True, default="AL2_x86_64_GPU"
+        max_length=256, null=True, blank=True, default="AL2_x86_64"
     )
     worker_disk_size = models.IntegerField(null=True, blank=True, default=100)
     max_worker_instance = models.IntegerField(
