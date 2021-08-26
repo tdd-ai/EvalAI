@@ -10,7 +10,7 @@
                 <!-- show after authenticate user -->
                 <li ng-if="isAuth"><a class="waves-effect waves-dark main-header-link" ui-sref="web.dashboard" ui-sref-active="active">Benchmarks</a></li>
                 <li ng-if="isAuth"><a class="waves-effect waves-dark main-header-link" href="https://data.tdd.ai/" target="_blank">Datasets</a></li>
-                <li ng-if="isAuth"><a class="waves-effect waves-dark main-header-link" href="https://tdd.ai/" target="_blank">About</a></li>
+                <li ng-if="isAuth"><a class="waves-effect waves-dark main-header-link" ui-sref="about-us" target="_blank">About</a></li>
             </ul>
             <ul class="right hide-on-med-and-down">
                 <li ng-if="!isAuth"><a class="waves-effect waves-dark main-header-link" ui-sref="auth.signup" ui-sref-active="active">Sign Up</a></li>

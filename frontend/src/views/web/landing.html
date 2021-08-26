@@ -24,78 +24,10 @@
                 </div>
             </div>
         </div>
-        <section class="ev-container ev-details text-med-black" id="ev-scroll-down">
-            <div class="grad-container text-med-black ">
-                <div class="row">
-                    <h4 class="w-300 center">Features</h4>
-                </div>
-                <div class="row">
-                    <div class="col s12 m2 l2">
-                        <img src="/dist/images/features/protocols.png" alt="" width="100%">
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h5 class="w-300">Leaderboards</h5>
-                        <p class="w-300 fs-16">We provide leaderboards for a vast set of tasks ranging from text classification to natural language Understanding 
-                            with the aim of standardizing the evaluation of the performance of Turkish Natural Language Processing models. Through this platform, 
-                            researchers are given the opportunity to  access the performance of models and their respective open source implementations on a single platform.</p>
-                    </div>
-                    <div class="col s12 m2 l2">
-                        <img src="/dist/images/features/remote.png" alt="" width="100%">
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h5 class="w-300">Fair On-cloud Evaluation</h5>
-                        <p class="w-300 fs-16">
-                            All the models are evaluated in a fair environment by an extensively tested and open source benchmarking tools. All of the evaluations are made 
-                            on unannotated datasets with an automated cloud-based environment. A great range of datasets are provided on Turkish Data Depository. 
-                            Researchers can submit datasets they developed and organise challenges to push the frontiers of the science.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m2 l2">
-                        <img src="/dist/images/features/docker.png" alt="" width="100%">
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h5 class="w-300">Open Source Implementations of the State-of-the-art</h5>
-                        <p class="w-300 fs-16">To ensure that the submitted model outputs are valid, researchers are required to 
-                            share an open source implementation of their models that will be publicly visible to the researchers worldwide.
-                            With the published open source implementations, the inspiration and informativeness of the previous works are maximized. </p>
-                    </div>
-                    <div class="col s12 m2 l2">
-                        <img src="/dist/images/features/cli.png" alt="" width="100%">
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h5 class="w-300">Baselines</h5>
-                        <p class="w-300 fs-16">Currently, baseline models for spell-checking, text classification, language modeling, named-entity recognition,
-                            machine translation, natural language inference, tokenization and part-of-speech tagging are provided.  
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m2 l2">
-                        <img src="/dist/images/features/portability.png" alt="" width="100%">
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h5 class="w-300">Structured Set of Datasets</h5>
-                        <p class="w-300 fs-16">Hand by hand with Turkish Data Depository project, an extensive set of datasets are provided to the researchers with 
-                            detailed documentations and in a easy-to-use manner. Under this project; trnews-64, a character language modeling dataset that contain 64 million words of news articles and columns,
-                            and trwiki-67,a language modeling dataset that contain 67 million words of raw wikipedia articles, datasets are constructed and there is ongoing effort on many more.</p>
-                    </div>
-                    <div class="col s12 m2 l2">
-                        <img src="/dist/images/features/faster-eval.png" alt="" width="100%">
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h5 class="w-300">Contests</h5>
-                        <p class="w-300 fs-16">Mukayese provides the standardized platform reserachers are in need of where they can publish the datasets they created and 
-                            organise contests thereon. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="ev-container ev-reverse-details text-med-black ev-super-light-bg" id="ev-scroll-down">
             <div class="grad-container text-med-black ">
                 <div class="row">
-                    <h4 class="w-300 center">Popular benchmarks</h4>
+                    <h4 class="w-300 center">Popular Mukayese benchmarks</h4>
                 </div>
                 <div class="row">
                     <div class="col s12 m3 l3" ng-repeat="challenge in main.challengeList.results track by $index"
@@ -112,14 +44,14 @@
                                         <br>
                                         <span class="w-300 fs-16">{{challenge.creator.team_name}}</span>
                                     </p>
-                                    <p><strong class="text-light-black fs-12">Starts on</strong>
+                                    <!-- <p><strong class="text-light-black fs-12">Starts on</strong>
                                         <br>
                                         <span class="w-300 fs-16">{{challenge.start_date | date:'medium'}}</span>
                                     </p>
                                     <p><strong class="text-light-black fs-12">Ends on</strong>
                                         <br>
                                         <span class="w-300 fs-16">{{challenge.end_date | date:'medium'}}</span>
-                                    </p>
+                                    </p> -->
                                 </div>
                                 <div class=" btn-card-detail waves-effect waves-dark w-300 fs-14"> <strong>View Details
                                     </strong> &nbsp; </div>
@@ -133,6 +65,63 @@
                 </div>
             </div>
         </section>
+        <section class="ev-container ev-details text-med-black" id="ev-scroll-down">
+            <div class="grad-container text-med-black ">
+                <div class="row">
+                    <h4 class="w-300 center">Features</h4>
+                </div>
+                <div class="row">
+
+                    <div class="col s12 m6 l6">
+                        <h5 class="w-300">Leaderboards</h5>
+                        <p class="w-300 fs-16">We provide leaderboards for a vast set of tasks ranging from text classification to natural language Understanding 
+                            with the aim of standardizing the evaluation of the performance of Turkish Natural Language Processing models. Through this platform, 
+                            researchers are given the opportunity to  access the performance of models and their respective open source implementations on a single platform.</p>
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <h5 class="w-300">Fair On-cloud Evaluation</h5>
+                        <p class="w-300 fs-16">
+                            All the models are evaluated in a fair environment by an extensively tested and open source benchmarking tools. All of the evaluations are made 
+                            on unannotated datasets with an automated cloud-based environment. A great range of datasets are provided on Turkish Data Depository. 
+                            Researchers can submit datasets they developed and organise challenges to push the frontiers of the science.</p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col s12 m6 l6">
+                        <h5 class="w-300">Open Source Implementations of the State-of-the-art</h5>
+                        <p class="w-300 fs-16">To ensure that the submitted model outputs are valid, researchers are required to 
+                            share an open source implementation of their models that will be publicly visible to the researchers worldwide.
+                            With the published open source implementations, the inspiration and informativeness of the previous works are maximized. </p>
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <h5 class="w-300">Baselines</h5>
+                        <p class="w-300 fs-16">Currently, baseline models for spell-checking, text classification, language modeling, named-entity recognition,
+                            machine translation, natural language inference, tokenization and part-of-speech tagging are provided.  
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col s12 m6 l6">
+                        <h5 class="w-300">Structured Set of Datasets</h5>
+                        <p class="w-300 fs-16">Hand by hand with Turkish Data Depository project, an extensive set of datasets are provided to the researchers with 
+                            detailed documentations and in a easy-to-use manner. Under this project; trnews-64, a character language modeling dataset that contain 64 million words of news articles and columns,
+                            and trwiki-67,a language modeling dataset that contain 67 million words of raw wikipedia articles, datasets are constructed and there is ongoing effort on many more.</p>
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <h5 class="w-300">Contests</h5>
+                        <p class="w-300 fs-16">Mukayese provides the standardized platform reserachers are in need of where they can publish the datasets they created and 
+                            organise contests thereon. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- organizatons section -->
         <!-- <section class="ev-container ev-reverse-details text-med-black" id="ev-scroll-down">
             <div class="grad-container text-med-black ">
