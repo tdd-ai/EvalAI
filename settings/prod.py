@@ -70,7 +70,8 @@ DEFAULT_FILE_STORAGE = "settings.custom_storages.MediaStorage"
 
 # Setup Email Backend related settings
 DEFAULT_FROM_EMAIL = "noreply@mukayese.tdd.ai"
-EMAIL_BACKEND = "django_ses.SESBackend"
+# EMAIL_BACKEND = "django_ses.SESBackend"
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.environ.get("EMAIL_HOST")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
