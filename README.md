@@ -30,8 +30,8 @@ Under this project, we created 5 distinct datasets with in-depth documentation a
 #### Datasets Created under this Project
 1. [trwiki-67](https://github.com/tdd-ai/trwiki-67)
 2. [trnews-64](https://github.com/tdd-ai/trnews-64)
-3. [asd]()
-4. [asd]()
+3. [TrMor Tokenization](https://data.tdd.ai/#/ea35db44-5c42-4a63-b20e-8b19d40c75dc)
+4. [35M Tweets Tokenization](https://data.tdd.ai/#/ce9ce922-0bc6-4c6a-a887-18c9c534005a)
 
 #### Datasets for which Train/Test/Validation Splits are Generated
 1. NER (arda'nın referans koyması gerekiyor)
