@@ -52,7 +52,7 @@ Under this project, we created 5 distinct datasets with in-depth documentation a
 
 #### Datasets for which Train/Test/Validation Splits are Generated
 
-1. NER (arda'nın referans koyması gerekiyor)
+1. NER [Turkish News NER Dataset](https://data.tdd.ai/#/0a027105-498c-46f7-9867-2ceeac5e64b7) : The original version of this dataset is proposed as 5 folds, we created train, dev and test splits using this folds. For original dataset, please contact to Reyyan Yeniterzi.
 2. [TrMor2018](https://github.com/ai-ku/TrMor2018)
 
 ## Trained Baseline Models
