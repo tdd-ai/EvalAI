@@ -81,7 +81,7 @@ urlpatterns = [
         include("participants.urls", namespace="participants"),
     ),
     url(r"^api/web/", include("web.urls", namespace="web")),
-    url(r"^email_reporting/", include("django_ses.urls")),
+    # url(r"^email_reporting/", include("django_ses.urls")),
     url(
         r"^api/docs/docs(?P<format>\.json|\.yaml)$",
         schema_view.without_ui(cache_timeout=0),

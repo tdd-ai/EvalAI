@@ -67,7 +67,7 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "corsheaders",
-    "django_ses",
+    # "django_ses",
     "import_export",
     "rest_auth",
     "rest_auth.registration",
@@ -187,6 +187,7 @@ REST_FRAMEWORK = {
 ACCOUNT_EMAIL_REQUIRED = True
 OLD_PASSWORD_FIELD_ENABLED = True
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_EMAIL_SUBJECT_PREFIX = os.environ.get("HOSTNAME", "Mukayese")
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = (
     "/api/auth/email-confirmed/"
 )

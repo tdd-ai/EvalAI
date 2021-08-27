@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["mukayese.tdd.ai"]
+ALLOWED_HOSTS = ["*.tdd.ai"]
 
 # Database
 # https://docs.djangoproject.com/en/1.10.2/ref/settings/#databases
