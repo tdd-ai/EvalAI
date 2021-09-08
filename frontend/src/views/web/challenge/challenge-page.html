@@ -53,7 +53,7 @@
                         </span>
                     </span>
                     <br>
-                    <span class="fs-16 w-300">
+                    <!-- <span class="fs-16 w-300">
                         <strong class="text-light-black">Starts on:</strong>
                         {{ challenge.page.start_date | date:'medium' }}
                     </span>
@@ -63,17 +63,17 @@
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                         </a>
                     </span>
-                    <br>
-                    <span class="fs-16 w-300">
+                    <br> -->
+                    <!-- <span class="fs-16 w-300">
                         <strong class="text-light-black">Ends on:</strong>
                         {{ challenge.page.end_date | date:'medium' }}
-                    </span>
-                    &nbsp;
+                    </span> -->
+                    <!-- &nbsp;
                     <span ng-if="challenge.isChallengeHost">
                         <a class="pointer" ng-click="challenge.challengeDateDialog($event)">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                         </a>
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <div class="col m2 l2 fs-16 w-300 center">
@@ -103,8 +103,8 @@
                             class="text-light-black w-300"><i class="fa fa-info"></i> Overview</a></li>
                     <li class="margin-btm-0"><a ui-sref=".evaluation" ui-sref-active="active-challenge"
                             class="text-light-black w-300"><i class="fa fa-bar-chart-o"></i> Evaluation</a></li>
-                    <li class="margin-btm-0"><a ui-sref=".phases" ui-sref-active="active-challenge"
-                            class="text-light-black w-300"><i class="fa fa-level-up"></i> Phases</a></li>
+                    <!-- <li class="margin-btm-0"><a ui-sref=".phases" ui-sref-active="active-challenge"
+                            class="text-light-black w-300"><i class="fa fa-level-up"></i> Phases</a></li> -->
                     <li class="margin-btm-0" ng-if="!challenge.isParticipated && challenge.isRegistrationOpen"><a
                             ui-sref=".participate" ui-sref-active="active-challenge" class="text-light-black w-300"><i
                                 class="fa fa-free-code-camp"></i> Participate</a></li>
@@ -130,3 +130,4 @@
     </div>
 </section>
 <ui-view></ui-view>
+

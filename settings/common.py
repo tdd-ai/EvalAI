@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import datetime
 import os
 import sys
+import urllib
 
 from datetime import timedelta
 
@@ -211,7 +212,17 @@ AWS_SECRET_ACCESS_KEY = os.environ.get(
 AWS_REGION = os.environ.get("AWS_DEFAULT_REGION", "eu-central-1")
 
 # Broker url for celery
-CELERY_BROKER_URL = "sqs://%s:%s@" % (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
+BROKER_URL = 'sqs://{0}:{1}@'.format(
+    urllib.parse.quote(AWS_ACCESS_KEY_ID, safe=''),
+    urllib.parse.quote(AWS_SECRET_ACCESS_KEY, safe='')
+)
+
+BROKER_TRANSPORT = 'sqs'
+BROKER_TRANSPORT_OPTIONS = {
+    'region': 'eu-central-1',
+}
+BROKER_USER = AWS_ACCESS_KEY_ID
+BROKER_PASSWORD = AWS_SECRET_ACCESS_KEY
 
 # CORS Settings
 CORS_ORIGIN_ALLOW_ALL = True
@@ -296,7 +307,7 @@ REST_AUTH_SERIALIZERS = {
 }
 
 # For inviting users to participant and host teams.
-ADMIN_EMAIL = "admin@mukayese.tdd.ai"
+ADMIN_EMAIL = "turkishdatadepot@gmail.com"
 CLOUDCV_TEAM_EMAIL = "Mukayese Team <admin@mukayese.tdd.ai>"
 
 # Expiry time of a presigned url for uploading files to AWS, in seconds.
@@ -329,7 +340,7 @@ SENDGRID_SETTINGS = {
     "TEMPLATES": {
         "CHALLENGE_INVITATION": "d-60825bcf014f4958bdb1b9173471d420",
         "CHALLENGE_APPROVAL_EMAIL": "d-45e0adc0597b4b60bd7c384aa903c488",
-        "WORKER_RESTART_EMAIL": "d-3d9a474a5e2b4ac4ad5a45ba9c0b84bd",
+        "WORKER_RESTART_EMAIL": "d-198f61d66fe547c49074fb4c23cbaa2a",
         "CLUSTER_CREATION_TEMPLATE": "d-6de90fd760df4a41bb9bff1872eaab82",
         "WORKER_START_EMAIL": "d-debd127cab2345e789538131501ff416",
     }
@@ -399,3 +410,4 @@ EKS_CLUSTER_TRUST_RELATION = {
         }
     ],
 }
+
