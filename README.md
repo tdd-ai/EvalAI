@@ -118,5 +118,4 @@ Since we require the open source implementation for submissions, we plan to crea
 - Ali Safaya - @alisafaya
 - Emirhan Kurtuluş - @ekurtulus
 - Arda Göktoğan - @ardofski
-- Our Mentor - Dorukhan Afacan @dafajon
-- Our Advisor - Prof. Deniz Yüret @dyuret
+
